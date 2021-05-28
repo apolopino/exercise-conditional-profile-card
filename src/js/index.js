@@ -94,8 +94,9 @@ window.onload = function() {
   render(window.variables); //render the card for the first time
 
   document.querySelectorAll(".picker").forEach(function(elm) {
+    //AP: El querySelectorAll toma los elementos de la clase .picker y devuelve un array
     elm.addEventListener("change", function(e) {
-      // <- add a listener to every input
+      // <- add a listener to every input (un evento change, cuando cambie llama la func)
       const attribute = e.target.getAttribute("for"); // when any input changes, collect the value
       let values = {};
       values[attribute] =
